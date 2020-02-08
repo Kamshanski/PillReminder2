@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.dawandeapp.pillreminder.ui.viewmodels.EditBoxViewModel" />0
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/chbMonday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Пн"
+            android:checked="@={viewmodel.dow[0]}"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/chbTuesday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/chbTuesday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Вт"
+            android:checked="@={viewmodel.dow[1]}"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/chbWednesday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chbMonday"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/chbWednesday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ср"
+            android:checked="@={viewmodel.dow[2]}"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/chbThursday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chbTuesday"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/chbThursday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Чт"
+            android:checked="@={viewmodel.dow[3]}"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/chbFriday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chbWednesday"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/chbFriday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Пт"
+            android:checked="@={viewmodel.dow[4]}"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/chbSaturday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chbThursday"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/chbSaturday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Сб"
+            android:checked="@={viewmodel.dow[5]}"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/chbSunday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chbFriday"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/chbSunday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Вс"
+            android:checked="@={viewmodel.dow[6]}"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chbSaturday"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
